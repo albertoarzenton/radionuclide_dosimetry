@@ -39,8 +39,10 @@ with the Python script "dcmtotxt.py" (make sure to have the "numpy" and
 converted from TXT to ROOT format by opening using the ROOT macro
 "txttoroot.cc". To do that, from bash type:
 
+````bash
 cd DICOMconverter
 root -q -l 'txttoroot.cc("<TXT file name>","<ROOT file name>")'
+````
 
 Finally, the "hu.py" script can be useful to visualize the
 distribution of the Hounsfield units (or other arbitrary units) in the CT files.
@@ -50,10 +52,12 @@ distribution of the Hounsfield units (or other arbitrary units) in the CT files.
 
 After converting the DICOM files in the way just explained, from bash type:
 
+````bash
 mkdir build
 cd build
 cmake .. && make
 ./radionuclide_dosimetry
+````
 
 By doing this, the macro "run.mac" is automatically run, as specified in the
 main file. Alternatively, "vis.mac" can be used to visualize the geometry; by
@@ -84,8 +88,10 @@ Alternatively, to visualize the dose map using Python-MatPlotLib, the results
 must be first processed in ROOT with the macro "read_dose.cc", contained in the
 "read" folder. From bash:
 
+````bash
 cd read
 root -q -l 'read_dose.cc("<ROOT file name>","<TXT file name>")'
+````
 
 Subsequently, the TXT file generated can be read by the script
 "dosemap_vis.py" in the same folder. With this, the 3D dose map can be
