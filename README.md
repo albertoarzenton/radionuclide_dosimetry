@@ -1,19 +1,14 @@
-//
-//  RADIONUCLIDE DOSIMETRY
-//  ----------------------------------------------------------------------------
-//
-//  Version 1.0
-//
-//  Geant4 application for internal dosimetry studies.
-//  Developed within the ISOLPHARM project (https://isolpharm.pd.infn.it/web/).
-//
-//  Authors: A. Arzenton, D. Serafini, A. Leso, L. Morselli, M. Lunardon,
-//  A. Andrighetto, G. Russo
-//
-//  Contact: alberto.arzenton@pd.infn.it, giorgio-russo@cnr.it
-//
-//
-////////////////////////////////////////////////////////////////////////////////
+##  RADIONUCLIDE DOSIMETRY
+
+Version 1.0
+
+Geant4 application for internal dosimetry studies.
+Developed within the ISOLPHARM project (https://isolpharm.pd.infn.it/web/).
+
+Authors: A. Arzenton, D. Serafini, A. Leso, L. Morselli, M. Lunardon, A.
+Andrighetto, G. Russo
+
+Contact: alberto.arzenton@pd.infn.it, giorgio-russo@cnr.it
 
 
 ## Structure
