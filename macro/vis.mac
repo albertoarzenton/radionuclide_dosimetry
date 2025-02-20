@@ -1,0 +1,23 @@
+/run/initialize
+/vis/open OGL 600x600-0+0
+/vis/viewer/set/autoRefresh false
+/vis/verbose errors
+
+/vis/drawVolume
+/vis/viewer/set/viewpointVector 0 0 1
+/vis/viewer/set/lightsVector 1 1 0
+
+/vis/viewer/set/style wireframe
+/vis/viewer/set/auxiliaryEdge true
+/vis/viewer/set/lineSegmentsPerCircle 10
+
+#/vis/viewer/set/culling density 1 1. g/cm3
+
+#Add axes
+/vis/scene/add/axes 0 0 0 5 cm
+
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+/vis/scene/endOfEventAction accumulate
