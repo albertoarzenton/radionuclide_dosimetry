@@ -36,7 +36,7 @@ injection and are kindly provided by the group of Giorgio Russo from CNR-IBFM.
 For the code to work properly, the DICOM files must be converted into TXT files
 with the Python script "dcmtotxt.py" (make sure to have the "numpy" and
 "pydicom" modules installed). After that, only PET (or SPECT) files must be
-converted from TXT to ROOT format by opening using the ROOT macro
+converted from TXT to ROOT format by using the ROOT macro
 "txttoroot.cc". To do that, from bash type:
 
 ````bash
