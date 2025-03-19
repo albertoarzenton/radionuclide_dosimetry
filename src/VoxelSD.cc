@@ -54,7 +54,7 @@ G4bool VoxelSD::ProcessHits(G4Step* step, G4TouchableHistory*)
   auto dose = edep/mass;
 
   auto name = touchable->GetVolume()->GetLogicalVolume()->GetMaterial()->GetName();
-  if (name == "G4_AIR") dose = 0; // To neglect dose deposition in air
+  if (name == "G4_AIR") dose = 0.; // To neglect dose deposition in air voxels
 
   if(edep == 0.) return true;
 

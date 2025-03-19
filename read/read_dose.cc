@@ -1,5 +1,5 @@
 /*
-    Reading COMPASS ROOT file
+    Reading ROOT TH3F file
     -------------------------
 
     #Authors: A. Arzenton, L. Morselli
@@ -7,12 +7,12 @@
 
 */
 
-void read_dose(std::string filename, std::string outfilename)
+void read_dose(std::string filename)
 {
   // Open ROOT file
 
-  //filename = "../results_GEANT/" + filename + ".root";
-  //outfilename = "../results/" + outfilename + ".txt";
+  //filename = "../build/" + filename + ".root";
+  //outfilename = "../read/" + outfilename + ".txt";
 
   TFile * input_file = new TFile(filename.c_str());
 
@@ -22,7 +22,7 @@ void read_dose(std::string filename, std::string outfilename)
   int sh2 = hDose->GetNbinsY();
   int sh3 = hDose->GetNbinsZ();
 
-  std::ofstream f(outfilename.c_str());
+  std::ofstream f("dose_map.txt");
 
   for (int i = 0; i < sh1; i++) {
     for (int j = 0; j < sh2; j++) {

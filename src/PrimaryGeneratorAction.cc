@@ -1,4 +1,5 @@
 #include "PrimaryGeneratorAction.hh"
+#include "Parameters.hh"
 
 #include "G4RunManager.hh"
 #include "G4LogicalVolumeStore.hh"
@@ -69,10 +70,10 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* event)
   fParticleGun->SetParticleCharge(ionCharge);
   fParticleGun->SetParticleEnergy(0*keV);
 
-  nVoxelX = 148;
-  nVoxelY = 160;
-  nVoxelZ = 160;
-  G4double v_size = 0.5*mm; // Voxel size
+  nVoxelX = Parameters::cVoxelX;
+  nVoxelY = Parameters::cVoxelY;
+  nVoxelZ = Parameters::cVoxelZ;
+  G4double v_size = Parameters::cVoxelSize; // Voxel size
 
   fPET->GetRandom3(x,y,z);
   x = (x-nVoxelX*0.5+G4UniformRand())*v_size;

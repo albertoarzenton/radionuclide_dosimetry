@@ -6,7 +6,7 @@
     #Contact: alberto.arzenton@pd.infn.it
 */
 
-void txttoroot(std::string filename, std::string outfilename)
+void txttoroot(std::string filename)
 {
   std::ifstream file (filename.c_str(), std::ios::in);
   std::string buffer;
@@ -29,7 +29,7 @@ void txttoroot(std::string filename, std::string outfilename)
 
     }
 
-  TFile* et = new TFile(outfilename.c_str(), "RECREATE");
+  TFile* et = new TFile("PET_1.root", "RECREATE");
   histo->Write();
   et->Close();
 }

@@ -1,5 +1,6 @@
 #include "DetectorConstruction.hh"
 #include "VoxelSD.hh"
+#include "Parameters.hh"
 
 #include "G4Box.hh"
 #include "G4Tubs.hh"
@@ -139,14 +140,14 @@ G4VPhysicalVolume* DetectorConstruction::ConstructDetector()
 
   // Setting up voxel dimension
 
-  G4double halfVoxelSize = 0.25*mm;
+  G4double halfVoxelSize = Parameters::cVoxelSize/2;
 
   voxelizedPhantom->SetVoxelDimensions(halfVoxelSize, halfVoxelSize, halfVoxelSize);
 
-  // Setting Phantom Dimension
-  nVoxelX = 148;
-  nVoxelY = 160;
-  nVoxelZ = 160;
+  // Setting Phantom Dimensions
+  nVoxelX = Parameters::cVoxelX;
+  nVoxelY = Parameters::cVoxelY;
+  nVoxelZ = Parameters::cVoxelZ;
 
   voxelizedPhantom->SetNoVoxels(nVoxelX, nVoxelY, nVoxelZ);
 

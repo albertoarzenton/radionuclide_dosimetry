@@ -27,7 +27,7 @@ c1, c2, c3 = int((sh[0]-1)/2), int((sh[1]-1)/2), int((sh[2]-1)/2) #Center
 
 #Geant4 results ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-with open("dosemap.txt",'r') as gatefile:
+with open("dose_map.txt",'r') as gatefile:
     lines = gatefile.readlines()
     dose = []
     slice = []
@@ -43,7 +43,7 @@ with open("dosemap.txt",'r') as gatefile:
     dose = np.array(dose)[0:132, 16:156, 12:152]
 
 dose = dose*1000 #From Gy/s to mGy/s
-
+#print(dose.shape)
 dosei = np.zeros((sh[1],sh[2]))
 for j in range(0, sh[1]):
     for k in range(0, sh[2]):

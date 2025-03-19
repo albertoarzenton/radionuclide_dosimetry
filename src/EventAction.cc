@@ -3,6 +3,7 @@
 #include "VoxelHit.hh"
 #include "RunAction.hh"
 #include "Analysis.hh"
+#include "Parameters.hh"
 
 #include "G4RunManager.hh"
 #include "G4Event.hh"
@@ -85,9 +86,9 @@ void EventAction::EndOfEventAction(const G4Event* event)
 
   G4int ix,iy,iz;
 
-  nVoxelX = 148;
-  nVoxelY = 160;
-  nVoxelZ = 160;
+  nVoxelX = Parameters::cVoxelX;
+  nVoxelY = Parameters::cVoxelY;
+  nVoxelZ = Parameters::cVoxelZ;
 
   G4AnalysisManager *man = G4AnalysisManager::Instance();
 
@@ -98,7 +99,6 @@ void EventAction::EndOfEventAction(const G4Event* event)
      hit_dose        = (*voxelHC)[i]->GetDose();
      hit_copy_number = (*voxelHC)[i]->GetCopyNumber();
 
-
      // Convert to 3D indices (+1 for ROOT going 1,2,3...)
      ix = hit_copy_number%nVoxelX+1;
      iy = (hit_copy_number/nVoxelX)%nVoxelY+1;
@@ -107,11 +107,12 @@ void EventAction::EndOfEventAction(const G4Event* event)
      fRunAction->AddEdep(ix,iy,iz,hit_energy);
      fRunAction->AddDose(ix,iy,iz,hit_dose);
 
-     man->FillNtupleIColumn(0, 0, ix);
-     man->FillNtupleIColumn(0, 1, iy);
-     man->FillNtupleIColumn(0, 2, iz);
-     man->FillNtupleDColumn(0, 3, 1.);
+     man->FillNtupleIColumn(0, 0, event->GetEventID());
+     man->FillNtupleIColumn(0, 1, ix);
+     man->FillNtupleIColumn(0, 2, iy);
+     man->FillNtupleIColumn(0, 3, iz);
      man->FillNtupleDColumn(0, 4, hit_energy);
+     man->FillNtupleDColumn(0, 5, hit_dose);
      man->AddNtupleRow(0);
    }
 
