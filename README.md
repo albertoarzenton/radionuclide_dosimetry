@@ -74,8 +74,8 @@ visualization of the geometry and run a custom number of events:
 
 The source files ("src" folder) can be edited to change the main simulation
 settings.
-- "DetectorConstruction.cc" reads the CT file for the construction of the virtual
-phantom (line 170) and manages its composition in terms of G4Materials.
+- "DetectorConstruction.cc" reads the CT file for the construction of the
+virtual phantom (line 170) and manages its composition in terms of G4Materials.
 - "PrimaryGeneratorAction.cc" selects the PET or SPECT file to sample the
 probability distribution of the events (line 29) and sets which radionuclide to
 generate (from line 46).
