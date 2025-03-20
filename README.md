@@ -47,7 +47,6 @@ root -q -l 'txttoroot.cc("<TXT file name>")'
 
 If the number of voxel changes (e.g., using another image), line 14 of the ROOT
 macro must be updated accordingly.
-
 Finally, the "hu.py" script can be useful to visualize the distribution of the
 Hounsfield units (or other arbitrary units) in the CT files.
 
