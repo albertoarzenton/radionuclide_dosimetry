@@ -1,6 +1,0 @@
-/build/*
-/DICOMconverter/*.dcm
-/DICOMconverter/*.root
-/DICOMconverter/*.txt
-/read/*.txt
-/read/*.root
