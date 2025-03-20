@@ -1,6 +1,6 @@
 /*
-    Reading COMPASS ROOT file
-    -------------------------
+    Converting TXT to ROOT file
+    ---------------------------
 
     #Authors: A. Arzenton, L. Morselli
     #Contact: alberto.arzenton@pd.infn.it
