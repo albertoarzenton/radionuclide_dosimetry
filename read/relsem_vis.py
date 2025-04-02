@@ -24,7 +24,7 @@ c1, c2, c3 = int((sh[0]-1)/2), int((sh[1]-1)/2), int((sh[2]-1)/2) #Center
 
 #Geant4 results ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-with open("relsem_map.txt",'r') as gatefile:
+with open("relSEM_map.txt",'r') as gatefile:
     lines = gatefile.readlines()
     relsem = []
     slice = []
