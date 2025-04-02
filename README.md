@@ -87,9 +87,9 @@ generate (from line 46).
 the radioactive decay.
 - "VoxelSD.cc" neglects dose deposition in voxels made of air (line 57).
 
-When changing the number of voxels and/or their size, it is important to update
-these parameters in the header file "Parameters.hh", contained in the "include"
-folder.
+When changing the number of voxels in the images, their size and/or the CT
+units, it is important to update these parameters in the header file
+"Parameters.hh", contained in the "include" folder.
 
 
 ## How to read the results
