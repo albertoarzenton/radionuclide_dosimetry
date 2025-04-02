@@ -192,9 +192,9 @@ G4VPhysicalVolume* DetectorConstruction::ConstructDetector()
 
     n = i+nVoxelX*j+nVoxelX*nVoxelY*k;
 
-    if (HU < -3100) {materialIDs[n] = 0;}
-    else if (HU < -200) {materialIDs[n] = 1;}
-    else if (HU < 2900) {materialIDs[n] = 2;}
+    if (HU < Parameters::HUminLung) {materialIDs[n] = 0;}
+    else if (HU < Parameters::HUminSoft) {materialIDs[n] = 1;}
+    else if (HU < Parameters::HUminBone) {materialIDs[n] = 2;}
     else {materialIDs[n] = 3;}
 
   }
