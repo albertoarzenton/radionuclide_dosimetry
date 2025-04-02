@@ -21,7 +21,8 @@ based on G4PhantomParameterisation. Each tissue, represented by a different
 density in the CT, can be associated to a different G4Material.
 The generation of primaries follows instead the distribution contained in an
 emission tomography file, which can be either a Positron Emission Tomography
-(PET) or a Single-Photon Emission Computed Tomography (SPECT).
+(PET) or a Single-Photon Emission Computed Tomography (SPECT).  In case of SPECT,
+the image must already include the attenuation correction.
 For every event, the deposited energy and the absorbed dose are scored in each
 voxel which has been hit. At the end of the run, the final result is the
 absorbed dose imparted by a cumulative activity corresponding to the total
