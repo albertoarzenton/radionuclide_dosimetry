@@ -70,10 +70,10 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* event)
   fParticleGun->SetParticleCharge(ionCharge);
   fParticleGun->SetParticleEnergy(0*keV);
 
-  nVoxelX = Parameters::cVoxelX;
-  nVoxelY = Parameters::cVoxelY;
-  nVoxelZ = Parameters::cVoxelZ;
-  G4double v_size = Parameters::cVoxelSize; // Voxel size
+  nVoxelX = Parameters::eVoxelX;
+  nVoxelY = Parameters::eVoxelY;
+  nVoxelZ = Parameters::eVoxelZ;
+  G4double v_size = Parameters::eVoxelSize; // PET or SPECT voxel size
 
   fPET->GetRandom3(x,y,z);
   x = (x-nVoxelX*0.5+G4UniformRand())*v_size;
