@@ -32,7 +32,7 @@ number of events launched.
 
 The "DICOMconverter" folder contains a hybrid PET/CT study, with the DICOM files
 "CT_1.dcm" and "PET_18FDG_1.dcm". Murine images were obtained after ¹⁸F-FDG
-injection and are kindly provided by the group of Giorgio Russo from CNR-IBFM.
+injection and are kindly provided by the group of Giorgio Russo from CNR-IBSBC.
 For the code to work properly, the DICOM files must be converted into TXT files
 with the Python script "dcmtotxt.py" (make sure to have the "numpy" and
 "pydicom" modules installed). Then, only PET (or SPECT) files must be converted
