@@ -33,7 +33,7 @@ sh1 = [PET1.shape[0], PET1.shape[1], PET1.shape[2]]
 
 def trapezoidal(a,b,c): #Trapezoidal integration of the activity
     t = [1,4,24]*3600 #PET or SPECT acquisition time after injection [s]
-    return (a*t[0] + (b+a)*t[1] + (c+b)*t[2])/2 #Cumulated activity
+    return (a*t[0] + (b+a)*(t[1]-t[0]) + (c+b)*(t[2]-t[1]))/2 #Cumulated activity
 
 with open("PET_1.txt", "w") as output:
     lines = []
