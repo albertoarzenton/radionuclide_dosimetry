@@ -99,10 +99,10 @@ void EventAction::EndOfEventAction(const G4Event* event)
      hit_dose        = (*voxelHC)[i]->GetDose();
      hit_copy_number = (*voxelHC)[i]->GetCopyNumber();
 
-     // Convert to 3D indices (+1 for ROOT going 1,2,3...)
-     ix = hit_copy_number%nVoxelX+1;
-     iy = (hit_copy_number/nVoxelX)%nVoxelY+1;
-     iz = (hit_copy_number/nVoxelX)/nVoxelY+1;
+     // Convert to 3D indices
+     ix = hit_copy_number%nVoxelX;
+     iy = (hit_copy_number/nVoxelX)%nVoxelY;
+     iz = (hit_copy_number/nVoxelX)/nVoxelY;
 
      fRunAction->AddEdep(ix,iy,iz,hit_energy);
      fRunAction->AddDose(ix,iy,iz,hit_dose);
